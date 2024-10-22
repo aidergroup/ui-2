@@ -1,17 +1,17 @@
 # @aider/ui
 
-[![publish](https://github.com/aidergroup/ui/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/aidergroup/ui/actions/workflows/npm-publish.yml)
+[![publish](https://github.com/aidergroup/ui-2/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/aidergroup/ui/actions/workflows/npm-publish.yml)
 
 ## Installation
 
 ```sh
-$ npm install --save @aider/ui
+$ npm install --save @aider/ui-2
 ```
 
 ## Development
 
 ```sh
-$ git clone https://github.com/aidergroup/ui.git
+$ git clone https://github.com/aidergroup/ui-2.git
 $ cd ui
 $ npm install
 $ npm start # launch Storybook
@@ -20,12 +20,8 @@ $ npm start # launch Storybook
 ## Publishing
 
 ```sh
-$ npm run release -- --release-as {major|minor|patch}
-$ git push --follow-tags origin main
+$ yarn run release -- --release-as {major|minor|patch}
+$ git push --follow-tags origin master
 ```
 
 New versions are published to npm when a release is created on Github.
-
-## Storybook
-
-[aider-ui.netlify.app](https://aider-ui.netlify.app)

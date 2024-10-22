@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { keyframes } from 'styled-components'
 
 const getInitials = str => {
   if (!str) return null
@@ -12,6 +11,11 @@ const getInitials = str => {
   }
 
   return initials
+}
+
+
+interface Props {
+  name?:string
 }
 
 const Avatar = React.forwardRef((props, ref) => {
@@ -30,26 +34,5 @@ const Avatar = React.forwardRef((props, ref) => {
     </div>
   )
 })
-
-const FadeIn = keyframes`
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-`
-
-const StyledLabel = styled.div`
-  animation: ${FadeIn} 0.25s;
-`
-
-Avatar.propTypes = {
-  name: PropTypes.string,
-}
-
-Avatar.defaultProps = {
-  name: '',
-}
 
 export default Avatar

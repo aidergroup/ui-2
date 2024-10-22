@@ -1,0 +1,42 @@
+{
+    "env": {
+        "node": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react-hooks/recommended"
+    ],
+    "plugins": ["@typescript-eslint", "prettier", "react"],
+    "parser": "@typescript-eslint/parser",
+    "rules": {
+        "linebreak-style": ["error", "unix"],
+        "no-var": "error",
+        "no-eval": "error",
+        "prefer-const": "error",
+        "default-case": "error",
+        "default-case-last": "error",
+        "eqeqeq": "warn",
+        "require-await": "warn",
+
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/quotes": ["error", "double"],
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/semi": "error",
+        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-var-requires": "off",
+        "@typescript-eslint/no-explicit-any": "warn",
+
+        "react-hooks/rules-of-hooks": "off",
+        "react-hooks/exhaustive-deps": "off"
+    }
+}

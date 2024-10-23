@@ -79,7 +79,30 @@ const theme = createTheme({
         },
     },
 
-    components: {},
+    components: {
+        MuiButton: {
+            defaultProps: {
+                variant: "contained",
+            },
+            styleOverrides: {
+                root: {
+                    borderRadius: "8px",
+                    paddingTop: "20px",
+                    paddingRight: "10px",
+                    paddingBottom: "20px",
+                    paddingLeft: "10px",
+                    gap: "8px",
+                },
+                text: {
+                    fontWeight: 400,
+                    lineHeight: "18.2px",
+                    textAlign: "center",
+                    fontSize: "14px",
+                    color: "#ffffff",
+                },
+            },
+        },
+    },
 });
 
 export default theme;

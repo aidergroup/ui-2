@@ -2,7 +2,7 @@
     "name": "aider-ui-v2",
     "private": false,
     "description": "Version 2 of UI library for Aider projects.",
-    "version": "0.0.3",
+    "version": "0.0.5",
     "main": "dist/index.umd.js",
     "module": "dist/index.es.js",
     "types": "dist/index.d.ts",

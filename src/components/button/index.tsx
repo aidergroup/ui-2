@@ -5,7 +5,11 @@ interface Props extends React.HtmlHTMLAttributes<HTMLButtonElement> {
 }
 
 const Button: React.FC<Props> = ({ title, ...props }) => {
-    return <button {...props}>{title}</button>;
+    return (
+        <button className="bg-gray-100" {...props}>
+            {title}
+        </button>
+    );
 };
 
 export default Button;

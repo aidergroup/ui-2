@@ -1,11 +1,13 @@
-# @aider/ui-2
-
-[![publish](https://github.com/aidergroup/ui-2/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/aidergroup/ui/actions/workflows/npm-publish.yml)
+# aider-ui-v2
 
 ## Installation
 
 ```sh
-$ npm install --save @aider/ui-2
+$ npm install aider-ui-v2
+```
+
+```sh
+$ yarn add aider-ui-v2
 ```
 
 ## Development
@@ -13,8 +15,7 @@ $ npm install --save @aider/ui-2
 ```sh
 $ git clone https://github.com/aidergroup/ui-2.git
 $ cd ui
-$ npm install
-$ npm start # launch Storybook
+$ yarn install
 ```
 
 ## Publishing

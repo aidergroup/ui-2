@@ -4,9 +4,6 @@
 
 ```sh
 $ npm install aider-ui-v2
-```
-
-```sh
 $ yarn add aider-ui-v2
 ```
 

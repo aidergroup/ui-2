@@ -1,4 +1,2 @@
 export { default as Button } from "./components/button";
-export { default as Text } from "./components/typography/Text";
-
-export * as tailwindConfig from "../tailwind.config";
+export { default as Typography } from "./components/typography";

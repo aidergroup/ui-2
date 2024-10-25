@@ -87,6 +87,57 @@ const theme = createTheme({
                 },
             },
         },
+        MuiInputLabel: {
+            styleOverrides: {
+                root: {
+                    width: 341,
+                    height: 18,
+                    fontWeight: 400,
+                    fontSize: 14,
+                    lineHeight: "18.2px",
+                    color: "#444D56",
+                },
+            },
+        },
+
+        MuiInputBase: {
+            styleOverrides: {
+                root: {
+                    "::before": {
+                        display: "none",
+                    },
+                    "::after": {
+                        display: "none",
+                    },
+                },
+            },
+        },
+        MuiInput: {
+            styleOverrides: {
+                root: {
+                    width: 341,
+                    height: 38,
+                    borderRadius: "6px",
+                    fontSize: "0.875rem",
+                    fontWeight: 400,
+                    lineHeight: 1.5,
+                    color: "#2F363D",
+                    background: "#fff",
+                    border: "1.5px solid #E1E4E8",
+                    padding: "0px 10px",
+
+                    "&:hover": {
+                        borderColor: "#009AC8",
+                    },
+                    "&.Mui-focused": {
+                        borderColor: "#009AC8",
+                    },
+                    "&.Mui-error": {
+                        borderColor: "#ED5454",
+                    },
+                },
+            },
+        },
     },
 });
 

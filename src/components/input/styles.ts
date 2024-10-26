@@ -14,8 +14,4 @@ export const Styled = {
         line-height: "15.6px";
         color: #ed5454;
     `,
-    Placeholder: styled("div")`
-        height: "31.4px";
-        width: 100%;
-    `,
 };

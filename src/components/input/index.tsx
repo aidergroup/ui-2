@@ -32,7 +32,7 @@ export default forwardRef<HTMLInputElement, Props>(
                             {error && error.message ? (
                                 <Styled.HelperText>{error.message}</Styled.HelperText>
                             ) : (
-                                <Styled.Placeholder />
+                                <div style={{ width: "100%", height: "23.4px" }} />
                             )}
                         </Styled.Container>
                     );

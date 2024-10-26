@@ -31,7 +31,9 @@ export default forwardRef<HTMLInputElement, Props>(
                             />
                             {error && error.message ? (
                                 <Styled.HelperText>{error.message}</Styled.HelperText>
-                            ) : null}
+                            ) : (
+                                <Styled.Placeholder />
+                            )}
                         </Styled.Container>
                     );
                 }}

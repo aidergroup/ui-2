@@ -84,6 +84,17 @@ const theme = createTheme({
             styleOverrides: {
                 root: {
                     borderRadius: "8px",
+                    boxShadow: "none",
+                    textTransform: "capitalize",
+                    "&:hover": {
+                        boxShadow: "none",
+                    },
+                    "&:acitve": {
+                        boxShadow: "none",
+                    },
+                    "&:focus": {
+                        boxShadow: "none",
+                    },
                 },
             },
         },

@@ -2,11 +2,10 @@ import { styled } from "@mui/material";
 import Typography from "../typography";
 
 export const Styled = {
-    Container: styled("div")`
+    Container: styled("div")<{ label?: string }>`
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 8px;
     `,
     HelperText: styled(Typography)`
         font-size: 12px;

@@ -24,6 +24,7 @@ export default forwardRef<HTMLInputElement, Props>(
                             {label ? <InputLabel style={labelStyle}>{label}</InputLabel> : null}
                             <Input
                                 {...props}
+                                sx={{ ...(label && { marginTop: "8px" }) }}
                                 error={!!error}
                                 onChange={onChange}
                                 value={value}

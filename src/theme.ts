@@ -110,7 +110,6 @@ const theme = createTheme({
                 },
             },
         },
-
         MuiInputBase: {
             styleOverrides: {
                 root: {
@@ -123,6 +122,7 @@ const theme = createTheme({
                 },
             },
         },
+
         MuiInput: {
             styleOverrides: {
                 root: {

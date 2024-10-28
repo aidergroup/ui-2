@@ -1,10 +1,10 @@
-# aider-ui-v2
+# @aidergroup/ui-v2
 
 ## Installation
 
 ```sh
-$ npm install aider-ui-v2
-$ yarn add aider-ui-v2
+$ npm install @aidergroup/ui-v2
+$ yarn add @aidergroup/ui-v2
 ```
 
 ## Development

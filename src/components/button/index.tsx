@@ -1,11 +1,20 @@
-import React from "react";
+import { forwardRef } from "react";
+import { Button, ButtonProps } from "@mui/material";
+import { Styled } from "./styles";
 
-interface Props extends React.HtmlHTMLAttributes<HTMLButtonElement> {
-    title: string;
+interface Props extends ButtonProps {
+    loading?: boolean;
 }
 
-const Button: React.FC<Props> = ({ title, ...props }) => {
-    return <button {...props}>{title}</button>;
-};
-
-export default Button;
+export default forwardRef<HTMLButtonElement, Props>(
+    ({ children, loading, variant, disabled, ...props }, ref) => {
+        return (
+            <Button {...props} variant={variant} disabled={disabled} ref={ref}>
+                {loading ? (
+                    <Styled.Spinner buttonVariant={variant} buttonDisabled={disabled} size={18} />
+                ) : null}
+                {children}
+            </Button>
+        );
+    },
+);

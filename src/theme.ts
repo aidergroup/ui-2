@@ -82,6 +82,33 @@ const theme = createTheme({
 
     components: {
         MuiButton: {
+            variants: [
+                {
+                    props: { variant: "contained" },
+                    style: {
+                        "&:disabled": {
+                            backgroundColor: "#E1E4E8",
+                        },
+                    },
+                },
+                {
+                    props: { variant: "text" },
+                    style: {
+                        "&:disabled": {
+                            color: "#6A737D",
+                        },
+                    },
+                },
+                {
+                    props: { variant: "outlined" },
+                    style: {
+                        "&:disabled": {
+                            color: "#6A737D",
+                            border: "1px solid #6A737D",
+                        },
+                    },
+                },
+            ],
             styleOverrides: {
                 root: {
                     borderRadius: "8px",

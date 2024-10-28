@@ -32,6 +32,7 @@ const theme = createTheme({
     typography: {
         allVariants: {
             fontWeight: 400,
+            color: "#28292C",
         },
         h1: {
             fontSize: "36px",
@@ -133,7 +134,7 @@ const theme = createTheme({
                     fontWeight: 400,
                     lineHeight: 1.5,
                     color: "#2F363D",
-                    background: "#fff",
+                    background: "#ffff",
                     border: "1.5px solid #E1E4E8",
                     padding: "0px 10px",
 

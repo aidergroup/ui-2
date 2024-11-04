@@ -11,7 +11,10 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: path.resolve(__dirname, "src/index.ts"),
+            entry: {
+                "/": path.resolve(__dirname, "src/index.ts"),
+                "/icons": path.resolve(__dirname, "src/assets/icons/index.ts"),
+            },
             name: "ui-2",
             fileName: format => `index.${format}.js`,
         },

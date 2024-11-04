@@ -2,19 +2,19 @@ import { ButtonProps, CircularProgress, styled } from "@mui/material";
 
 export const Styled = {
     Spinner: styled(CircularProgress)<{
-        buttonVariant: ButtonProps["variant"];
-        buttonDisabled?: boolean;
+        variation: ButtonProps["variant"];
+        disabled?: boolean;
     }>`
-        color: ${({ buttonVariant, buttonDisabled, theme }) => {
-            if (buttonDisabled && buttonVariant === "contained") {
+        color: ${({ variation, disabled, theme }) => {
+            if (disabled && variation === "contained") {
                 return "white";
             }
 
-            if (buttonDisabled && (buttonVariant === "outlined" || buttonVariant == "text")) {
+            if (disabled && (variation === "outlined" || variation == "text")) {
                 return theme.palette.grey[400];
             }
 
-            if (buttonVariant === "outlined" || buttonVariant === "text") {
+            if (variation === "outlined" || variation === "text") {
                 return theme.palette.primary.main;
             }
             return "white";

@@ -11,7 +11,7 @@ export default forwardRef<HTMLButtonElement, Props>(
         return (
             <Button {...props} variant={variant} disabled={disabled} ref={ref}>
                 {loading ? (
-                    <Styled.Spinner buttonVariant={variant} buttonDisabled={disabled} size={18} />
+                    <Styled.Spinner variation={variant} disabled={disabled} size={18} />
                 ) : null}
                 {children}
             </Button>

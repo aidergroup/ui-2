@@ -3,6 +3,16 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 
+interface PreRenderedChunk {
+    exports: string[];
+    facadeModuleId: string | null;
+    isDynamicEntry: boolean;
+    isEntry: boolean;
+    isImplicitEntry: boolean;
+    moduleIds: string[];
+    name: string;
+    type: "chunk";
+}
 export default defineConfig({
     resolve: {
         alias: {
@@ -20,12 +30,17 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ["react", "react-dom"],
-            output: {
-                globals: {
-                    react: "React",
-                    "react-dom": "ReactDOM",
+            output: [
+                {
+                    entryFileNames: ({ facadeModuleId }) =>
+                        facadeModuleId.includes("assets/icons") ? "icons.es.js" : "index.es.js",
+                    globals: {
+                        react: "React",
+                        "react-dom": "ReactDOM",
+                    },
+                    format: "es",
                 },
-            },
+            ],
         },
         sourcemap: true,
         emptyOutDir: true,

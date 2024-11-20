@@ -1,8 +1,9 @@
-import theme from "../../theme";
-import { ThemeProvider } from "@emotion/react";
+import { ReactNode } from "react";
+import theme from "./theme";
+import { ThemeProvider as MUIThemeProvider } from "@emotion/react";
 
-const SharedThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-    return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+    return <MUIThemeProvider theme={theme}>{children}</MUIThemeProvider>;
 };
 
-export default SharedThemeProvider;
+export default ThemeProvider;

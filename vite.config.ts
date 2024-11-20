@@ -3,16 +3,6 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
 
-interface PreRenderedChunk {
-    exports: string[];
-    facadeModuleId: string | null;
-    isDynamicEntry: boolean;
-    isEntry: boolean;
-    isImplicitEntry: boolean;
-    moduleIds: string[];
-    name: string;
-    type: "chunk";
-}
 export default defineConfig({
     resolve: {
         alias: {
@@ -29,7 +19,7 @@ export default defineConfig({
             fileName: format => `index.${format}.js`,
         },
         rollupOptions: {
-            external: ["react", "react-dom"],
+            external: ["react", "react-dom", "@emotion/react", "@emotion/styled", "@mui/material"],
             output: [
                 {
                     entryFileNames: ({ facadeModuleId }) =>

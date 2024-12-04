@@ -28,7 +28,6 @@ export default defineConfig({
         },
         sourcemap: true,
         emptyOutDir: true,
-        ssr: true,
     },
     plugins: [react(), dts()],
 });

@@ -11,26 +11,19 @@ export default defineConfig({
     },
     build: {
         lib: {
-            entry: [
-                path.resolve(__dirname, "src/index.ts"),
-                path.resolve(__dirname, "src/assets/icons/index.ts"),
-            ],
+            entry: path.resolve(__dirname, "src/index.ts"),
             name: "ui-2",
             fileName: format => `index.${format}.js`,
+            formats: ["es", "umd", "cjs"],
         },
         rollupOptions: {
             external: ["react", "react-dom", "@emotion/react", "@emotion/styled", "@mui/material"],
-            output: [
-                {
-                    entryFileNames: ({ facadeModuleId }) =>
-                        facadeModuleId.includes("assets/icons") ? "icons.es.js" : "index.es.js",
-                    globals: {
-                        react: "React",
-                        "react-dom": "ReactDOM",
-                    },
-                    format: "es",
+            output: {
+                globals: {
+                    react: "React",
+                    "react-dom": "ReactDOM",
                 },
-            ],
+            },
         },
         sourcemap: true,
         emptyOutDir: true,

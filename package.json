@@ -2,13 +2,14 @@
     "name": "@aidergroup/ui-v2",
     "private": false,
     "description": "Version 2 of UI library for Aider projects.",
-    "version": "1.5.3",
-    "main": "dist/index.umd.js",
-    "module": "dist/index.es.js",
-    "types": "dist/index.d.ts",
+    "version": "1.5.4",
+    "main": "./dist/index.umd.js",
+    "module": "./dist/index.es.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
             "import": "./dist/index.es.js",
+            "require": "./dist/index.cjs.js",
             "types": "./dist/index.d.ts"
         }
     },

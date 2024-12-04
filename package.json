@@ -3,13 +3,13 @@
     "private": false,
     "description": "Version 2 of UI library for Aider projects.",
     "version": "1.5.8",
-    "main": "./dist/index.umd.js",
-    "module": "./dist/index.es.js",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.es.js",
-            "require": "./dist/index.umd.js",
+            "import": "./dist/index.js",
+            "require": "./dist/index.mjs",
             "types": "./dist/index.d.ts"
         }
     },

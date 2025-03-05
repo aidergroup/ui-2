@@ -147,10 +147,20 @@ const theme = createTheme({
                     "::after": {
                         display: "none",
                     },
+
+                    "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
+                        display: "none",
+                    },
+                    "& input[type=number]": {
+                        MozAppearance: "textfield",
+                    },
+                    "& input:-webkit-autofill": {
+                        WebkitBoxShadow: "0 0 0 100px #ffff inset",
+                        borderRadius: "unset",
+                    },
                 },
             },
         },
-
         MuiInput: {
             styleOverrides: {
                 root: {

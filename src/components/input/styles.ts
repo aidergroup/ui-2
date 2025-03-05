@@ -1,5 +1,4 @@
-import { styled } from "@mui/material";
-import Typography from "../typography";
+import { styled, Typography } from "@mui/material";
 
 export const Styled = {
     Container: styled("div")<{ label?: string }>`

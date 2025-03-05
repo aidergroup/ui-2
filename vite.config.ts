@@ -16,12 +16,14 @@ export default defineConfig({
             fileName: format => `index.${format}.js`,
         },
         rollupOptions: {
-            external: ["react", "react-dom"],
+            input: "src/index.ts",
+            external: ["react", "react-dom", "@emotion/react", "@emotion/styled", "@mui/material"],
             output: {
                 globals: {
                     react: "React",
                     "react-dom": "ReactDOM",
                 },
+                format: "es",
             },
         },
         sourcemap: true,

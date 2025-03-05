@@ -82,6 +82,33 @@ const theme = createTheme({
 
     components: {
         MuiButton: {
+            variants: [
+                {
+                    props: { variant: "contained" },
+                    style: {
+                        "&:disabled": {
+                            backgroundColor: "#E1E4E8",
+                        },
+                    },
+                },
+                {
+                    props: { variant: "text" },
+                    style: {
+                        "&:disabled": {
+                            color: "#6A737D",
+                        },
+                    },
+                },
+                {
+                    props: { variant: "outlined" },
+                    style: {
+                        "&:disabled": {
+                            color: "#6A737D",
+                            border: "1px solid #6A737D",
+                        },
+                    },
+                },
+            ],
             styleOverrides: {
                 root: {
                     borderRadius: "8px",
@@ -120,10 +147,20 @@ const theme = createTheme({
                     "::after": {
                         display: "none",
                     },
+
+                    "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
+                        display: "none",
+                    },
+                    "& input[type=number]": {
+                        MozAppearance: "textfield",
+                    },
+                    "& input:-webkit-autofill": {
+                        WebkitBoxShadow: "0 0 0 100px #ffff inset",
+                        borderRadius: "unset",
+                    },
                 },
             },
         },
-
         MuiInput: {
             styleOverrides: {
                 root: {
